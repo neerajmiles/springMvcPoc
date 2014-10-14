@@ -18,4 +18,8 @@ public class UserSearchService {
 	public List<User> getUsers() {				
 		return userDaoImpl.listUsers();
 	}
+	
+	public List<User> findUsersLike(String user) {				
+		return userDaoImpl.getUserByString(user);
+	}
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -54,8 +55,15 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public List<User> getUserByString(String userSrchStr) {
-		// TODO Auto-generated method stub
-		return null;
+		 Session session = this.sessionFactory.openSession();  //.getCurrentSession();
+	        @SuppressWarnings("unchecked")
+			List<User> usersList = session.createCriteria(User.class).add(Restrictions.ilike("username", "%"+userSrchStr+"%") ).list();
+			
+	        for(User p : usersList){
+	            System.out.println("Person List::"+p);
+	        }
+			
+	        return usersList;
 	}
 
 }
