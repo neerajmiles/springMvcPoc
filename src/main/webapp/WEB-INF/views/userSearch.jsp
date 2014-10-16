@@ -36,7 +36,7 @@
 	 function gridController($scope, $http,$location) {
          $scope.paramNm=getParameterByName("user");
          //alert(getParameterByName("user"));
-         $http.get('/loginApp/search?user='+getParameterByName("user")).
+         $http.get('/loginMvcApp/search?user='+getParameterByName("user")).
          success(function(data) {
            $scope.users = data;
          });
@@ -78,7 +78,7 @@
 				$window.location.href = link;
 
 			} else {
-				link = "/loginApp/userSearch?user=" + searchval
+				link = "/loginMvcApp/userSearch?user=" + searchval
 				$window.location.href = link;
 
 			}

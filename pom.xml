@@ -137,7 +137,7 @@
 	</repositories>
 
 	<build>
-		<finalName>loginApp</finalName>
+		<finalName>loginMvcApp</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

@@ -4,6 +4,6 @@
 <body> 
 <h1>Home page</h1>  
 <p>This is a Home Page.</p>  
-<p><a href="/loginApp/userSearch?user=">GoTo: Search User!</a></p>  
+<p><a href="/loginMvcApp/userSearch?user=">GoTo: Search User!</a></p>  
 </body>
 </html>
